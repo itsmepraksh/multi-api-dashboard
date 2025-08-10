@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <main class="p-4">
+        <nav class="flex w-full justify-center items-center">
+            <h1 class="font-medium text-2xl  ">Multi-API Dashboard</h1>
+            <!-- <button class="bg-blue-500 text-white px-2 text-sm font-medium rounded active:bg-blue-600 active:scale-[0.9]">refresh</button> -->
+        </nav>
+        <div id="searchBar" class="flex py-4">
+            <input type="text" placeholder="search jokes..." class="bg-gray-200 p-2 rounded">
+            <p class="bg-gray-400 py-2 px-4 active:scale-[0.9] active:bg-gray-500">enter</p>
+        </div>
+
+        <section class="jokes">
+            <div id="jokes-heading" class="flex justify-between">
+                <div class="flex gap-4">
+                    <h2 class="text-lg">Jokes</h2>
+                    <button id="jokes-refresh" class="bg-blue-500 active:scale-[0.9] active:bg-blue-600 rounded py-1 px-4 text-sm font-medium text-white">refresh</button>
+                </div>
+                <h2>Filter</h2>
+            </div>
+            <div id="jokes-data" class="flex overflow-hidden overflow-x-scroll gap-4 py-5">
+                <!-- jokes-elem-render -->
+            </div>
+        </section>
+
+
+
+        <section class="quotes py-4">
+            <div id="quotes-heading" class="flex justify-between">
+                <div class="flex gap-4 ">
+                    <h2 class="text-lg">quotes</h2>
+                    <button id="quotes-refresh" class="bg-blue-500 rounded py-1 px-4 text-sm font-medium text-white active:scale-[0.9] active:bg-blue-600">refresh</button>
+                </div>
+                <h2>Filter</h2>
+            </div>
+            <div id="quotes-data" class="flex overflow-hidden overflow-x-scroll gap-4 py-5">
+                <!-- quotes-elem-render -->
+            </div>
+        </section>
+
+
+        <section class="users py-4">
+            <div id="users-heading" class="flex justify-between">
+                <div class="flex gap-4">
+                    <h2 class="text-lg">users</h2>
+                    <button id="users-refresh" class="bg-blue-500 rounded py-1 px-4 text-sm font-medium text-white active:scale-[0.9] active:bg-blue-600">refresh</button>
+                </div>
+
+                <h2>Filter</h2>
+            </div>
+            <div id="users-data" class="flex overflow-hidden overflow-x-scroll gap-4 py-5">
+                <!-- users-elem-render -->
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
