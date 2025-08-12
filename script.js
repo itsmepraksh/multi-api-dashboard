@@ -1,6 +1,9 @@
 
 import { getData } from "./module/getData.js";
 
+import { searchFunction } from "./functions/search.js";
+ 
+
 // import { fetchData, getJokesRefresh } from "./module/fetchData.js";
 
 let jokeContainter = document.querySelector('#jokes-data');
@@ -15,6 +18,24 @@ let quoteRefreshBtn = document.querySelector("#quotes-refresh")
 let userRefreshBtn = document.querySelector("#users-refresh")
 
 console.dir(jokeRefreshBtn)
+
+searchFunction()
+ 
+// let form = document.getElementById("searchBar");
+
+// form.addEventListener('submit',(e)=>{
+//     e.preventDefault()
+//     console.log('its working')
+// })
+
+
+
+
+
+
+
+
+
 
 
 // refresh jokes feature - add new data
