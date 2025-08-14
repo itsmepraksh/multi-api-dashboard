@@ -4,12 +4,10 @@ import { getData } from "../module/getData.js";
 let jokesContainer = document.querySelector('#jokes-data');
 let quoteContainer = document.querySelector("#quotes-data");
 let userContainer = document.querySelector("#users-data");
-
+let form = document.getElementById("searchBar");
+let userInp = document.querySelector("input")
 
 export let searchFunction = () => {
-    let form = document.getElementById("searchBar");
-
-    let userInp = document.querySelector("input")
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault()
@@ -120,8 +118,6 @@ function filterData(arrData, keyword, mapping) {
 
     let filterDta = arrData.filter((dataItm) => {
         let titleTxt = mapping.title(dataItm).toLowerCase();
-
-
         return titleTxt.includes(keyword)
     })
 

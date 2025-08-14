@@ -24,9 +24,21 @@
             <div id="jokes-heading" class="flex justify-between">
                 <div class="flex gap-4">
                     <h2 class="text-lg">Jokes</h2>
-                    <button id="jokes-refresh" class="bg-blue-500 active:scale-[0.9] active:bg-blue-600 rounded py-1 px-4 text-sm font-medium text-white">refresh</button>
+                    <button id="jokes-refresh"
+                        class="bg-blue-500 active:scale-[0.9] active:bg-blue-600 rounded py-1 px-4 text-sm font-medium text-white">refresh</button>
                 </div>
-                <h2>Filter</h2>
+                <div id="jokes-filter">
+
+                    <button
+                        class="bg-green-300 text-green-900  active:scale-[0.9] active:bg-green-600 rounded py-1 px-4 text-sm font-medium ">Filter</button>
+                    <select name="" class="bg-gray-200 py-1 text-sm">
+                        <option selected disabled value=null>--select--</option>
+                        <option value="general">general</option>
+                        <option value="programming">programming</option>
+                        <!-- <option value="dad">dad</option> -->
+
+                    </select>
+                </div>
             </div>
             <div id="jokes-data" class="flex overflow-hidden overflow-x-scroll gap-4 py-5">
                 <!-- jokes-elem-render -->
@@ -39,9 +51,10 @@
             <div id="quotes-heading" class="flex justify-between">
                 <div class="flex gap-4 ">
                     <h2 class="text-lg">quotes</h2>
-                    <button id="quotes-refresh" class="bg-blue-500 rounded py-1 px-4 text-sm font-medium text-white active:scale-[0.9] active:bg-blue-600">refresh</button>
+                    <button id="quotes-refresh"
+                        class="bg-blue-500 rounded py-1 px-4 text-sm font-medium text-white active:scale-[0.9] active:bg-blue-600">refresh</button>
                 </div>
-                <h2>Filter</h2>
+                <h2 class="bg-gray-200 p-1 text-sm">UnFiltered</h2>
             </div>
             <div id="quotes-data" class="flex overflow-hidden overflow-x-scroll gap-4 py-5">
                 <!-- quotes-elem-render -->
@@ -53,10 +66,20 @@
             <div id="users-heading" class="flex justify-between">
                 <div class="flex gap-4">
                     <h2 class="text-lg">users</h2>
-                    <button id="users-refresh" class="bg-blue-500 rounded py-1 px-4 text-sm font-medium text-white active:scale-[0.9] active:bg-blue-600">refresh</button>
+                    <button id="users-refresh"
+                        class="bg-blue-500 rounded py-1 px-4 text-sm font-medium text-white active:scale-[0.9] active:bg-blue-600">refresh</button>
                 </div>
 
-                <h2>Filter</h2>
+                <div id="users-filter">
+
+                    <button
+                        class="bg-green-300 text-green-900  active:scale-[0.9] active:bg-green-600 rounded py-1 px-4 text-sm font-medium ">Filter</button>
+                    <select name="" class="bg-gray-200 py-1 text-sm">
+                        <option selected disabled value=null>--select--</option>
+                        <option value="male">male</option>
+                        <option value="female">female</option> 
+                    </select>
+                </div>
             </div>
             <div id="users-data" class="flex overflow-hidden overflow-x-scroll gap-4 py-5">
                 <!-- users-elem-render -->

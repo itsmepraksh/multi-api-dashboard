@@ -2,6 +2,7 @@
 import { getData } from "./module/getData.js";
 
 import { searchFunction } from "./functions/search.js";
+import {  jokesFilterOption ,usersFilterOption } from "./functions/filterOption.js";
  
 
 // import { fetchData, getJokesRefresh } from "./module/fetchData.js";
@@ -17,9 +18,12 @@ let jokeRefreshBtn = document.querySelector("#jokes-refresh")
 let quoteRefreshBtn = document.querySelector("#quotes-refresh")
 let userRefreshBtn = document.querySelector("#users-refresh")
 
-console.dir(jokeRefreshBtn)
+// console.dir(jokeRefreshBtn)
 
 searchFunction()
+jokesFilterOption()
+usersFilterOption()
+
  
 // let form = document.getElementById("searchBar");
 
