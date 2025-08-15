@@ -147,6 +147,8 @@ async function getUsers() {
         subtitle : (item)=>item.email
     })
 
+   
+
     
     userRefreshBtn.removeAttribute("disabled")
     userRefreshBtn.classList.remove("bg-gray-500", "active:scale-[1]", "active:bg-gray-500") 
@@ -169,7 +171,7 @@ function renderSection(dataArr, container, mapping) {
         // console.log(dataItm[mapping.title])
 
         box.innerHTML = `
-        <div class="data shrink-[0] w-80 p-4 bg-zinc-300">
+        <div class="data shrink-[0] w-80 p-4 bg-zinc-200 rounded-lg">
                     <h1>${mapping.title(dataItm)}</h1>
                     <h3 class="text-sm py-2">--> ${mapping.subtitle(dataItm)}</h3>
         </div>
@@ -177,6 +179,9 @@ function renderSection(dataArr, container, mapping) {
         container.appendChild(box)
     })
 }
+
+
+
 async function renderData() {
     let [jokesData, usersData, quotesData] = await getData()
     // console.log(usersData)

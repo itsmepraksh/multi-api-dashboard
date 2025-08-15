@@ -57,17 +57,17 @@ function renderSection(arr, container, mapping) {
 
 
     // console.log(typeof arr)
-    console.log(arr, "ye rendersection ke andar check kar", mapping, container)
+    // console.log(arr, "ye rendersection ke andar check kar", mapping, container)
 
 
     arr.forEach((dataItm) => {
-        console.log(dataItm)
+        // console.log(dataItm)
         let box = document.createElement('div')
         box.setAttribute('class', "box")
         // console.log(dataItm[mapping.title])
 
         box.innerHTML = `
-                <div class="data shrink-[0] w-80 p-4 bg-zinc-300">
+                <div class="data shrink-[0] w-80 p-4 bg-zinc-200 rounded-lg">
                     <h1>${mapping.title(dataItm)}</h1>
                     <h3 class="text-sm py-2">--> ${mapping.subtitle(dataItm)}</h3>
                 </div>
@@ -121,7 +121,7 @@ function filterData(arrData, keyword, mapping) {
         return titleTxt.includes(keyword)
     })
 
-    console.log(filterDta, 'ye filterdta hai')
+    // console.log(filterDta, 'ye filterdta hai')
     return (Array.isArray(filterDta) && filterDta.length > 0) ? filterDta : null
 
 }

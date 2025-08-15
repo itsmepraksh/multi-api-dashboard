@@ -6,32 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari */
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    </style>
 </head>
 
 <body>
 
-    <main class="p-4">
-        <nav class="flex w-full justify-center items-center">
+    <main class="p-4 font-[arial] w-full lg:px-20 lg:rounded-xl">
+        <nav class="flex w-full justify-center items-center py-4">
             <h1 class="font-medium text-2xl  ">Multi-API Dashboard</h1>
             <!-- <button class="bg-blue-500 text-white px-2 text-sm font-medium rounded active:bg-blue-600 active:scale-[0.9]">refresh</button> -->
         </nav>
-        <form id="searchBar" class="flex py-4">
-            <input type="text" placeholder="search jokes..." class="bg-gray-200 p-2 rounded">
-            <button class="bg-gray-400 py-2 px-4 active:scale-[0.9] active:bg-gray-500">enter</button>
+        <form id="searchBar" class="flex flex-col lg:flex-row gap-4 justify-center w-full py-4">
+            <input type="text" placeholder="🔍Search jokes..." class="bg-gray-200 p-2 rounded-lg lg:w-1/2">
+            <button
+                class="bg-blue-500 py-2 px-4 active:scale-[0.9] active:bg-blue-700 rounded-lg text-white lg:w-[15%]">Enter</button>
         </form>
 
-        <section class="jokes">
+        <section class="jokes py-10">
+            <h2 class="text-lg font-bold text-zinc-800 pb-4">Jokes</h2>
             <div id="jokes-heading" class="flex justify-between">
-                <div class="flex gap-4">
-                    <h2 class="text-lg">Jokes</h2>
-                    <button id="jokes-refresh"
-                        class="bg-blue-500 active:scale-[0.9] active:bg-blue-600 rounded py-1 px-4 text-sm font-medium text-white">refresh</button>
-                </div>
-                <div id="jokes-filter">
+
+                <button id="jokes-refresh"
+                    class="bg-blue-500 active:scale-[0.9] active:bg-blue-600 rounded py-1 px-4 text-sm font-medium text-white">refresh</button>
+
+                <div id="jokes-filter" class="flex gap-2 lg:gap-4">
 
                     <button
                         class="bg-green-300 text-green-900  active:scale-[0.9] active:bg-green-600 rounded py-1 px-4 text-sm font-medium ">Filter</button>
-                    <select name="" class="bg-gray-200 py-1 text-sm">
+                    <select name="" class="bg-gray-200 py-1 text-sm rounded ">
                         <option selected disabled value=null>--select--</option>
                         <option value="general">general</option>
                         <option value="programming">programming</option>
@@ -40,7 +54,7 @@
                     </select>
                 </div>
             </div>
-            <div id="jokes-data" class="flex overflow-hidden overflow-x-scroll gap-4 py-5">
+            <div id="jokes-data" class="flex overflow-hidden overflow-x-scroll gap-4 py-5 hide-scrollbar">
                 <!-- jokes-elem-render -->
             </div>
         </section>
@@ -48,40 +62,40 @@
 
 
         <section class="quotes py-4">
+            <h2 class="text-lg font-bold text-zinc-800 pb-4">quotes</h2>
             <div id="quotes-heading" class="flex justify-between">
-                <div class="flex gap-4 ">
-                    <h2 class="text-lg">quotes</h2>
-                    <button id="quotes-refresh"
-                        class="bg-blue-500 rounded py-1 px-4 text-sm font-medium text-white active:scale-[0.9] active:bg-blue-600">refresh</button>
-                </div>
-                <h2 class="bg-gray-200 p-1 text-sm">UnFiltered</h2>
+
+                <button id="quotes-refresh"
+                    class="bg-blue-500 rounded py-1 px-4 text-sm font-medium text-white active:scale-[0.9] active:bg-blue-600">refresh</button>
+
+                <h2 class="bg-gray-200 p-1 text-sm rounded">UnFiltered</h2>
             </div>
-            <div id="quotes-data" class="flex overflow-hidden overflow-x-scroll gap-4 py-5">
+            <div id="quotes-data" class="flex overflow-hidden overflow-x-scroll gap-4 py-5 hide-scrollbar">
                 <!-- quotes-elem-render -->
             </div>
         </section>
 
 
         <section class="users py-4">
+                    <h2 class="text-lg font-bold text-zinc-800 pb-4">users</h2>
             <div id="users-heading" class="flex justify-between">
-                <div class="flex gap-4">
-                    <h2 class="text-lg">users</h2>
+                
                     <button id="users-refresh"
                         class="bg-blue-500 rounded py-1 px-4 text-sm font-medium text-white active:scale-[0.9] active:bg-blue-600">refresh</button>
-                </div>
+                
 
-                <div id="users-filter">
+                <div id="users-filter"  class="flex gap-2 lg:gap-4">
 
                     <button
                         class="bg-green-300 text-green-900  active:scale-[0.9] active:bg-green-600 rounded py-1 px-4 text-sm font-medium ">Filter</button>
-                    <select name="" class="bg-gray-200 py-1 text-sm">
+                    <select name="" class="bg-gray-200 py-1 text-sm rounded">
                         <option selected disabled value=null>--select--</option>
                         <option value="male">male</option>
-                        <option value="female">female</option> 
+                        <option value="female">female</option>
                     </select>
                 </div>
             </div>
-            <div id="users-data" class="flex overflow-hidden overflow-x-scroll gap-4 py-5">
+            <div id="users-data" class="flex overflow-hidden overflow-x-scroll gap-4 py-5 hide-scrollbar">
                 <!-- users-elem-render -->
             </div>
         </section>

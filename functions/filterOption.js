@@ -72,7 +72,7 @@ function renderSection(arr, container, mapping) {
         // console.log(dataItm[mapping.title])
 
         box.innerHTML = `
-                <div class="data shrink-[0] w-80 p-4 bg-zinc-300">
+                <div class="data shrink-[0] w-80 p-4 bg-zinc-200 rounded-lg">
                     <h1>${mapping.title(dataItm)}</h1>
                     <h3 class="text-sm py-2">--> ${mapping.subtitle(dataItm)}</h3>
                 </div>
